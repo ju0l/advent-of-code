@@ -1,9 +1,13 @@
+group = "org.juol.aoc"
+version = "1.0-SNAPSHOT"
+
 plugins {
     kotlin("jvm") version "2.2.21"
 }
 
-group = "org.juol.aoc"
-version = "1.0-SNAPSHOT"
+kotlin {
+    jvmToolchain(21)
+}
 
 repositories {
     mavenCentral()
@@ -15,8 +19,4 @@ dependencies {
     implementation("org.jgrapht:jgrapht-ext:1.5.2")
 
     testImplementation(kotlin("test"))
-}
-
-kotlin {
-    jvmToolchain(21)
 }
