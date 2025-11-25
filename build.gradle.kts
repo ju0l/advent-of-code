@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "2.1.0"
+    kotlin("jvm") version "2.2.21"
 }
 
 group = "org.juol.aoc"
@@ -10,9 +10,9 @@ repositories {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0")
-    implementation("org.jgrapht:jgrapht-core:1.1.0")
-    implementation("org.jgrapht:jgrapht-ext:1.1.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.2")
+    implementation("org.jgrapht:jgrapht-core:1.5.2")
+    implementation("org.jgrapht:jgrapht-ext:1.5.2")
 
     testImplementation(kotlin("test"))
 }
