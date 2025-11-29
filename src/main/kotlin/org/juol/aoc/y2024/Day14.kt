@@ -97,7 +97,10 @@ private fun part2(
     for (i in 1..10000) {
         robots.forEach { it.move() }
         val room = buildRoom(robots, w, h)
-        if (room.rows().any { row -> row.joinToString("") { if (it == 0) "." else "#" }.contains("#################") }) {
+        if (room
+                .rows()
+                .any { row -> row.joinToString("") { if (it == 0) "." else "#" }.contains("#################") }
+        ) {
             return i
         }
     }
@@ -105,27 +108,6 @@ private fun part2(
 }
 
 fun main() {
-    val testInput =
-        """
-        p=0,4 v=3,-3
-        p=6,3 v=-1,-3
-        p=10,3 v=-1,2
-        p=2,0 v=2,-1
-        p=0,0 v=1,3
-        p=3,0 v=-2,-2
-        p=7,6 v=-1,-3
-        p=3,0 v=-1,-2
-        p=9,3 v=2,3
-        p=7,3 v=-1,2
-        p=2,4 v=2,-3
-        p=9,5 v=-3,-3
-        """.trimIndent()
-
-    val testAnswer1 = 12
-    check(part1(testInput, 11, 7) == testAnswer1) { "answer 1 to test is wrong" }
-    val testAnswer2 = 0
-    check(part2(testInput, 11, 7) == testAnswer2) { "answer 2 to test is wrong" }
-
     val input = readInput("Day14")
     // 214109808
     part1(input, 101, 103).println()

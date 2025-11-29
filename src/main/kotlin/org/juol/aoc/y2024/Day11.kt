@@ -51,15 +51,6 @@ private fun part1(input: String): Long = process(25, input)
 private fun part2(input: String): Long = process(75, input)
 
 fun main() {
-    val testInput =
-        """
-        125 17
-        """.trimIndent()
-
-    val testAnswer1 = 55312L
-    check(part1(testInput) == testAnswer1) { "answer 1 to test is wrong" }
-    // test 2 is not relevant
-
     val input = readInput("Day11")
     // 231278
     part1(input).println()

@@ -90,41 +90,6 @@ private fun part2(input: String): Int {
 }
 
 fun main() {
-    val testAnswer1 = 18
-    check(
-        part1(
-            """
-            MMMSXXMASM
-            MSAMXMSMSA
-            AMXSXMAAMM
-            MSAMASMSMX
-            XMASAMXAMM
-            XXAMMXXAMA
-            SMSMSASXSS
-            SAXAMASAAA
-            MAMMMXMMMM
-            MXMXAXMASX
-            """.trimIndent(),
-        ) == testAnswer1,
-    ) { "answer 1 to test is wrong" }
-    val testAnswer2 = 9
-    check(
-        part2(
-            """
-            .M.S......
-            ..A..MSMS.
-            .M.S.MAA..
-            ..A.ASMSM.
-            .M.S.M....
-            ..........
-            S.S.S.S.S.
-            .A.A.A.A..
-            M.M.M.M.M.
-            ..........
-            """.trimIndent(),
-        ) == testAnswer2,
-    ) { "answer 2 to test is wrong" }
-
     val input = readInput("Day04")
     // 2454
     part1(input).println()

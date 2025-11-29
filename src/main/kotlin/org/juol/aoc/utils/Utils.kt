@@ -76,17 +76,17 @@ fun String.md5() =
 
 typealias Point = Pair<Int, Int>
 
-@JvmName("plusIntPair")
-operator fun Pair<Int, Int>.plus(other: Pair<Int, Int>) = Pair(first + other.first, second + other.second)
-
-@JvmName("plusLongPair")
-operator fun Pair<Long, Long>.plus(other: Pair<Long, Long>) = Pair(first + other.first, second + other.second)
-
 val Point.x: Int
     get() = first
 
 val Point.y: Int
     get() = second
+
+@JvmName("plusIntPair")
+operator fun Pair<Int, Int>.plus(other: Pair<Int, Int>) = Pair(first + other.first, second + other.second)
+
+@JvmName("plusLongPair")
+operator fun Pair<Long, Long>.plus(other: Pair<Long, Long>) = Pair(first + other.first, second + other.second)
 
 enum class Orientation {
     VERTICAL,

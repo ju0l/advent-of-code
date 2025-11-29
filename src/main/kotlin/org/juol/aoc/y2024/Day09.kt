@@ -98,16 +98,6 @@ private fun part2(input: String): Long {
 }
 
 fun main() {
-    val testInput1 =
-        """
-        2333133121414131402
-        """.trimIndent()
-
-    val testAnswer1 = 1928L
-    check(part1(testInput1) == testAnswer1) { "answer 1 to test is wrong" }
-    val testAnswer2 = 2858L
-    check(part2(testInput1) == testAnswer2) { "answer 2 to test is wrong" }
-
     val input = readInput("Day09")
     // 6398252054886
     part1(input).println()

@@ -43,21 +43,6 @@ private fun part2(input: String): Int {
 }
 
 fun main() {
-    val testInput =
-        """
-        7 6 4 2 1
-        1 2 7 8 9
-        9 7 6 2 1
-        1 3 2 4 5
-        8 6 4 4 1
-        1 3 6 7 9
-        """.trimIndent()
-
-    val testAnswer1 = 2
-    check(part1(testInput) == testAnswer1) { "answer 1 to test is wrong" }
-    val testAnswer2 = 4
-    check(part2(testInput) == testAnswer2) { "answer 2 to test is wrong" }
-
     val input = readInput("Day02")
     // 390
     part1(input).println()

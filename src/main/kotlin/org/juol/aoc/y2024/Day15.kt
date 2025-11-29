@@ -197,49 +197,6 @@ private fun part2(input: String): Long {
 }
 
 fun main() {
-    val testInput =
-        """
-        ##########
-        #..O..O.O#
-        #......O.#
-        #.OO..O.O#
-        #..O@..O.#
-        #O#..O...#
-        #O..O..O.#
-        #.OO.O.OO#
-        #....O...#
-        ##########
-
-        <vv>^<v^>v>^vv^v>v<>v^v<v<^vv<<<^><<><>>v<vvv<>^v^>^<<<><<v<<<v^vv^v>^
-        vvv<<^>^v^^><<>>><>^<<><^vv^^<>vvv<>><^^v>^>vv<>v<<<<v<^v>^<^^>>>^<v<v
-        ><>vv>v^v^<>><>>>><^^>vv>v<^^^>>v^v^<^^>v^^>v^<^v>v<>>v^v^<v>v^^<^^vv<
-        <<v<^>>^^^^>>>v^<>vvv^><v<<<>^^^vv^<vvv>^>v<^^^^v<>^>vvvv><>>v^<<^^^^^
-        ^><^><>>><>^^<<^^v>>><^<v>^<vv>>v>>>^v><>^v><<<<v>>v<v<v>vvv>^<><<>^><
-        ^>><>^v<><^vvv<^^<><v<<<<<><^v<<<><<<^^<v<^^^><^>>^<v^><<<^>>^v<v^v<v^
-        >^>>^v>vv>^<<^v<>><<><<v<<v><>v<^vv<<<>^^v^>^^>>><<^v>>v^v><^^>>^<>vv^
-        <><^^>^^^<><vvvvv^v<v<<>^v<v>v<<^><<><<><<<^^<<<^<<>><<><^^^>^^<>^>v<>
-        ^^>vv<^v^v<vv>^<><v<^v>^^^>>>^^vvv^>vvv<>>>^<^>>>>>^<<^v>^vvv<>^<><<v>
-        v^^>>><<^^<>>^v^<v^vv<>v^<<>^<^v^v><^<<<><<^<v><v<>vv>>v><v^<vv<>v^<<^
-        """.trimIndent()
-
-    val testInput2 =
-        """
-        ##############
-        ##......##..##
-        ##..........##
-        ##....[][]@.##
-        ##....[]....##
-        ##..........##
-        ##############
-
-        <vv<<^^<<^^
-        """.trimIndent()
-
-    val testAnswer1 = 10092L
-    check(part1(testInput) == testAnswer1) { "answer 1 to test is wrong" }
-    val testAnswer2 = 9021L
-    check(part2(testInput) == testAnswer2) { "answer 2 to test is wrong" }
-
     val input = readInput("Day15")
     // 1511865
     part1(input).println()

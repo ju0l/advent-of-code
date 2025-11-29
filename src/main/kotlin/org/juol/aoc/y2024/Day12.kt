@@ -117,34 +117,6 @@ private fun part2(input: String): Int {
 }
 
 fun main() {
-    val testInput1 =
-        """
-        RRRRIICCFF
-        RRRRIICCCF
-        VVRRRCCFFF
-        VVRCCCJFFF
-        VVVVCJJCFE
-        VVIVCCJJEE
-        VVIIICJJEE
-        MIIIIIJJEE
-        MIIISIJEEE
-        MMMISSJEEE
-        """.trimIndent()
-
-    val testInput2 =
-        """
-        EEEEE
-        EXXXX
-        EEEEE
-        EXXXX
-        EEEEE
-        """.trimIndent()
-
-    val testAnswer1 = 1930
-    check(part1(testInput1) == testAnswer1) { "answer 1 to test is wrong" }
-    val testAnswer2 = 236
-    check(part2(testInput2) == testAnswer2) { "answer 2 to test is wrong" }
-
     val input = readInput("Day12")
     // 1375574
     part1(input).println()

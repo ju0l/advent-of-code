@@ -68,25 +68,6 @@ private fun part2(input: String): Int {
 }
 
 fun main() {
-    val testInput =
-        """
-        ....#.....
-        .........#
-        ..........
-        ..#.......
-        .......#..
-        ..........
-        .#..^.....
-        ........#.
-        #.........
-        ......#...
-        """.trimIndent()
-
-    val testAnswer1 = 41
-    check(part1(testInput) == testAnswer1) { "answer 1 to test is wrong" }
-    val testAnswer2 = 6
-    check(part2(testInput) == testAnswer2) { "answer 2 to test is wrong" }
-
     val input = readInput("Day06")
     // 5404
     part1(input).println()

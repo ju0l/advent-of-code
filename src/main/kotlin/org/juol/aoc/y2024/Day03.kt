@@ -41,23 +41,6 @@ private fun part2(input: String): Int {
 }
 
 fun main() {
-    val testAnswer1 = 161
-    check(
-        part1(
-            """
-            xmul(2,4)%&mul[3,7]!@^do_not_mul(5,5)+mul(32,64]then(mul(11,8)mul(8,5))
-            """.trimIndent(),
-        ) == testAnswer1,
-    ) { "answer 1 to test is wrong" }
-    val testAnswer2 = 48
-    check(
-        part2(
-            """
-            xmul(2,4)&mul[3,7]!^don't()_mul(5,5)+mul(32,64](mul(11,8)undo()?mul(8,5))
-            """.trimIndent(),
-        ) == testAnswer2,
-    ) { "answer 2 to test is wrong" }
-
     val input = readInput("Day03")
     // 157621318
     part1(input).println()

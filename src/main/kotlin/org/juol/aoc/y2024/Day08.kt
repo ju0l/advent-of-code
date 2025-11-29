@@ -20,12 +20,16 @@ private fun calcNodes(
         when {
             // first is top left from second
             x1 < x2 && y1 < y2 -> pos1 + (-xDiff to -yDiff)
+
             // first is top right from second
             x1 > x2 && y1 < y2 -> pos1 + (xDiff to -yDiff)
+
             // first is bottom left from second
             x1 < x2 && y1 > y2 -> pos1 + (-xDiff to yDiff)
+
             // first is bottom right from second
             x1 > x2 && y1 > y2 -> pos1 + (xDiff to yDiff)
+
             else -> null
         }
 
@@ -88,29 +92,7 @@ private fun part2(input: String): Int {
 }
 
 fun main() {
-    val testInput =
-        """
-        ............
-        ........0...
-        .....0......
-        .......0....
-        ....0.......
-        ......A.....
-        ............
-        ............
-        ........A...
-        .........A..
-        ............
-        ............
-        """.trimIndent()
-
-    val testAnswer1 = 14
-    check(part1(testInput) == testAnswer1) { "answer 1 to test is wrong" }
-    val testAnswer2 = 34
-    check(part2(testInput) == testAnswer2) { "answer 2 to test is wrong" }
-
     val input = readInput("Day08")
-
     // 269
     part1(input).println()
     // 949

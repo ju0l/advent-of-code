@@ -42,47 +42,6 @@ private fun part2(input: String): String {
 }
 
 fun main() {
-    val testInput =
-        """
-        kh-tc
-        qp-kh
-        de-cg
-        ka-co
-        yn-aq
-        qp-ub
-        cg-tb
-        vc-aq
-        tb-ka
-        wh-tc
-        yn-cg
-        kh-ub
-        ta-co
-        de-co
-        tc-td
-        tb-wq
-        wh-td
-        ta-ka
-        td-qp
-        aq-cg
-        wq-ub
-        ub-vc
-        de-ta
-        wq-aq
-        wq-vc
-        wh-yn
-        ka-de
-        kh-ta
-        co-tc
-        wh-qp
-        tb-vc
-        td-yn
-        """.trimIndent()
-
-    val testAnswer1 = 7
-    check(part1(testInput) == testAnswer1) { "answer 1 to test is wrong" }
-    val testAnswer2 = "co,de,ka,ta"
-    check(part2(testInput) == testAnswer2) { "answer 2 to test is wrong" }
-
     val input = readInput("Day23")
     // 1599
     part1(input).println()

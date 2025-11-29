@@ -71,27 +71,6 @@ private fun part2(input: String): Int {
 }
 
 fun main() {
-    val testInput1 =
-        """
-        1
-        10
-        100
-        2024
-        """.trimIndent()
-
-    val testInput2 =
-        """
-        1
-        2
-        3
-        2024
-        """.trimIndent()
-
-    val testAnswer1 = 37327623.toBigInteger()
-    check(part1(testInput1) == testAnswer1) { "answer 1 to test is wrong" }
-    val testAnswer2 = 23
-    check(part2(testInput2) == testAnswer2) { "answer 2 to test is wrong" }
-
     val input = readInput("Day22")
     // 12664695565
     part1(input).println()

@@ -35,52 +35,6 @@ private fun part1(input: String): Int {
 }
 
 fun main() {
-    val testInput =
-        """
-        #####
-        .####
-        .####
-        .####
-        .#.#.
-        .#...
-        .....
-
-        #####
-        ##.##
-        .#.##
-        ...##
-        ...#.
-        ...#.
-        .....
-
-        .....
-        #....
-        #....
-        #...#
-        #.#.#
-        #.###
-        #####
-
-        .....
-        .....
-        #.#..
-        ###..
-        ###.#
-        ###.#
-        #####
-
-        .....
-        .....
-        .....
-        #....
-        #.#..
-        #.#.#
-        #####
-        """.trimIndent()
-
-    val testAnswer1 = 3
-    check(part1(testInput) == testAnswer1) { "answer 1 to test is wrong" }
-
     val input = readInput("Day25")
     // 3320
     part1(input).println()

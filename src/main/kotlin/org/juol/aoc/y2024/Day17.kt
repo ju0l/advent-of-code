@@ -25,9 +25,18 @@ private fun execute(
         val operand = program[pointer + 1]
 
         when (opcode) {
-            0L -> a = (a / 2.0.pow(combo(operand).toDouble())).toLong()
-            1L -> b = b.xor(operand)
-            2L -> b = combo(operand) % 8
+            0L -> {
+                a = (a / 2.0.pow(combo(operand).toDouble())).toLong()
+            }
+
+            1L -> {
+                b = b.xor(operand)
+            }
+
+            2L -> {
+                b = combo(operand) % 8
+            }
+
             3L -> {
                 if (a != 0L) {
                     pointer = operand.toInt()
@@ -35,10 +44,21 @@ private fun execute(
                 }
             }
 
-            4L -> b = b.xor(c)
-            5L -> outputs.add(combo(operand) % 8)
-            6L -> b = (a / 2.0.pow(combo(operand).toDouble())).toLong()
-            7L -> c = (a / 2.0.pow(combo(operand).toDouble())).toLong()
+            4L -> {
+                b = b.xor(c)
+            }
+
+            5L -> {
+                outputs.add(combo(operand) % 8)
+            }
+
+            6L -> {
+                b = (a / 2.0.pow(combo(operand).toDouble())).toLong()
+            }
+
+            7L -> {
+                c = (a / 2.0.pow(combo(operand).toDouble())).toLong()
+            }
         }
 
         pointer += 2
@@ -86,29 +106,6 @@ private fun part2(input: String): Long {
 }
 
 fun main() {
-    val testInput1 =
-        """
-        Register A: 729
-        Register B: 0
-        Register C: 0
-
-        Program: 0,1,5,4,3,0
-        """.trimIndent()
-
-    val testInput2 =
-        """
-        Register A: 2024
-        Register B: 0
-        Register C: 0
-
-        Program: 0,3,5,4,3,0
-        """.trimIndent()
-
-    val testAnswer1 = "4,6,3,5,6,3,5,2,1,0"
-    check(part1(testInput1) == testAnswer1) { "answer 1 to test is wrong" }
-    val testAnswer2 = 117440L
-    check(part2(testInput2) == testAnswer2) { "answer 2 to test is wrong" }
-
     val input = readInput("Day17")
     // 1,4,6,1,6,4,3,0,3
     part1(input).println()

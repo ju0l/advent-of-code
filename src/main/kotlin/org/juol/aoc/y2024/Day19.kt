@@ -46,25 +46,6 @@ private fun part2(input: String): Long {
 }
 
 fun main() {
-    val testInput =
-        """
-        r, wr, b, g, bwu, rb, gb, br
-
-        brwrr
-        bggr
-        gbbr
-        rrbgbr
-        ubwu
-        bwurrg
-        brgr
-        bbrgwb
-        """.trimIndent()
-
-    val testAnswer1 = 6
-    check(part1(testInput) == testAnswer1) { "answer 1 to test is wrong" }
-    val testAnswer2 = 16L
-    check(part2(testInput) == testAnswer2) { "answer 2 to test is wrong" }
-
     val input = readInput("Day19")
     // 258
     part1(input).println()

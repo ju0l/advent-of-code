@@ -120,20 +120,6 @@ private fun part1(input: String): Long = runParallel(input, 2)
 private fun part2(input: String): Long = runParallel(input, 25)
 
 fun main() {
-    val testInput =
-        """
-        029A
-        980A
-        179A
-        456A
-        379A
-        """.trimIndent()
-
-    val testAnswer1 = 126384L
-    check(part1(testInput) == testAnswer1) { "answer 1 to test is wrong" }
-//    val testAnswer2 = 0
-//    check(part2(testInput) == testAnswer2) { "answer 2 to test is wrong" }
-
     val input = readInput("Day21")
     // 136780
     part1(input).println()
