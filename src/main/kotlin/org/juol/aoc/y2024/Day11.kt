@@ -51,7 +51,7 @@ private fun part1(input: String): Long = process(25, input)
 private fun part2(input: String): Long = process(75, input)
 
 fun main() {
-    val input = readInput("Day11")
+    val input = readInput("y2024/Day11")
     // 231278
     part1(input).println()
     // 274229228071551

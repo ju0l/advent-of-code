@@ -16,7 +16,7 @@ private fun part2(input: String): Int {
 }
 
 fun main() {
-    val input = readInput("Day01")
+    val input = readInput("y2024/Day01")
     // 2192892
     part1(input).println()
     // 22962826

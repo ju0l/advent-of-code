@@ -42,7 +42,7 @@ private fun part2(input: String): String {
 }
 
 fun main() {
-    val input = readInput("Day23")
+    val input = readInput("y2024/Day23")
     // 1599
     part1(input).println()
     // av,ax,dg,di,dw,fa,ge,kh,ki,ot,qw,vz,yw

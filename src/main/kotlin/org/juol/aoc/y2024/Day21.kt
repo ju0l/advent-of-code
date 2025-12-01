@@ -120,7 +120,7 @@ private fun part1(input: String): Long = runParallel(input, 2)
 private fun part2(input: String): Long = runParallel(input, 25)
 
 fun main() {
-    val input = readInput("Day21")
+    val input = readInput("y2024/Day21")
     // 136780
     part1(input).println()
     // 167538833832712

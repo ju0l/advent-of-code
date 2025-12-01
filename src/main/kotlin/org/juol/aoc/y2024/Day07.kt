@@ -46,7 +46,7 @@ private fun part1(input: String): BigInteger = count(parse(input), listOf("+", "
 private fun part2(input: String): BigInteger = count(parse(input), listOf("+", "*", "||"))
 
 fun main() {
-    val input = readInput("Day07")
+    val input = readInput("y2024/Day07")
     // 4122618559853
     part1(input).println()
     // 227615740238334
