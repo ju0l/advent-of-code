@@ -7,9 +7,9 @@ import kotlin.io.path.readText
 
 fun readInput(name: String) = Path("src/main/resources/$name.txt").readText()
 
-fun <T> Boolean?.ifFalseThen(block: () -> T?): T? = if (this != true) block() else null
+inline fun <T> Boolean?.ifFalseThen(block: () -> T?): T? = if (this != true) block() else null
 
-fun <T> Boolean?.ifTrueThen(block: () -> T?): T? = if (this == true) block() else null
+inline fun <T> Boolean?.ifTrueThen(block: () -> T?): T? = if (this == true) block() else null
 
 fun Any?.println() = println(this)
 
@@ -75,8 +75,8 @@ fun <T> combineLists(
 
 /**
  * Returns all possible length chunks.
- * 123 -> [[1, 2, 3]]
- * 1234 -> [[1, 2, 3, 4], [12, 34]]
+ * "123" -> [["1", "2", "3"]]
+ * "1234" -> [["1", "2", "3", "4"], ["12", "34"]]
  */
 fun String.chunkAllLengths(): List<List<String>> =
     (1..length / 2)
