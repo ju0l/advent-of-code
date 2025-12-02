@@ -2,7 +2,7 @@ package org.juol.aoc.y2025
 
 import org.juol.aoc.utils.*
 
-fun String.parseRotations() =
+private fun String.parseRotations() =
     lines().map {
         val d = it.first()
         val n = it.drop(1).toInt()

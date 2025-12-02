@@ -69,6 +69,14 @@ fun <T> combineLists(
     return results
 }
 
+fun String.chunkAllLengths(): List<List<String>> =
+    (1..length / 2)
+        .map { l -> chunked(l) }
+        .filter { l ->
+            val expectedSize = l.first().length
+            l.all { it.length == expectedSize }
+        }
+
 fun String.md5() =
     BigInteger(1, MessageDigest.getInstance("MD5").digest(toByteArray()))
         .toString(16)
