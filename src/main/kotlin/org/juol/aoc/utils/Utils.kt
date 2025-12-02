@@ -7,6 +7,10 @@ import kotlin.io.path.readText
 
 fun readInput(name: String) = Path("src/main/resources/$name.txt").readText()
 
+fun <T> Boolean?.ifFalseThen(block: () -> T?): T? = if (this != true) block() else null
+
+fun <T> Boolean?.ifTrueThen(block: () -> T?): T? = if (this == true) block() else null
+
 fun Any?.println() = println(this)
 
 fun Int.isEven() = this % 2 == 0
@@ -71,11 +75,7 @@ fun <T> combineLists(
 
 fun String.chunkAllLengths(): List<List<String>> =
     (1..length / 2)
-        .map { l -> chunked(l) }
-        .filter { l ->
-            val expectedSize = l.first().length
-            l.all { it.length == expectedSize }
-        }
+        .mapNotNull { (length % it == 0).ifTrueThen { chunked(it) } }
 
 fun String.md5() =
     BigInteger(1, MessageDigest.getInstance("MD5").digest(toByteArray()))
