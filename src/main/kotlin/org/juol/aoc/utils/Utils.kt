@@ -73,6 +73,11 @@ fun <T> combineLists(
     return results
 }
 
+/**
+ * Returns all possible length chunks.
+ * 123 -> [[1, 2, 3]]
+ * 1234 -> [[1, 2, 3, 4], [12, 34]]
+ */
 fun String.chunkAllLengths(): List<List<String>> =
     (1..length / 2)
         .mapNotNull { (length % it == 0).ifTrueThen { chunked(it) } }
