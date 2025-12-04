@@ -101,6 +101,26 @@ operator fun Pair<Int, Int>.plus(other: Pair<Int, Int>) = Pair(first + other.fir
 @JvmName("plusLongPair")
 operator fun Pair<Long, Long>.plus(other: Pair<Long, Long>) = Pair(first + other.first, second + other.second)
 
+fun Point.neighbors(): List<Point> =
+    listOf(
+        this + (0 to -1),
+        this + (1 to 0),
+        this + (0 to 1),
+        this + (-1 to 0),
+    )
+
+fun Point.adjacent(): List<Point> =
+    listOf(
+        this + (0 to -1),
+        this + (1 to -1),
+        this + (1 to 0),
+        this + (1 to 1),
+        this + (0 to 1),
+        this + (-1 to 1),
+        this + (-1 to 0),
+        this + (-1 to -1),
+    )
+
 enum class Orientation {
     VERTICAL,
     HORIZONTAL,
