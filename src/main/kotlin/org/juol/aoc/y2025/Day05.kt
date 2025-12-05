@@ -1,6 +1,7 @@
 package org.juol.aoc.y2025
 
 import org.juol.aoc.utils.*
+import kotlin.math.max
 
 private data class IngredientRanges(
     val all: List<Long>,
@@ -34,34 +35,18 @@ private fun part1(input: String): Int {
 
 private fun part2(input: String): Long {
     val (_, fresh) = input.parseIngredients()
-    var sum = 0L
-    val ranges =
-        fresh
-            .mapIndexedNotNull { i, p ->
-                var (a, b) = p
-                fresh.subList(0, i).forEach { (c, d) ->
-                    if (a >= c && b <= d) {
-                        return@mapIndexedNotNull null
-                    }
-                    if (a in c..d) {
-                        a = d + 1
-                    } else if (b in c..d) {
-                        b = c - 1
-                    }
-                }
-                Pair(a, b)
-            }
-    ranges.forEachIndexed { i, (a, b) ->
-        var excluded = 0L
-        ranges.subList(0, i).forEach { (c, d) ->
-            if (a <= c && b >= d) {
-                excluded = d - c + 1
-            }
+    val merged = mutableListOf<Pair<Long, Long>>()
+
+    fresh.sortedBy { it.first }.forEach { p ->
+        val prev = merged.lastOrNull()
+        if (prev == null || p.first > prev.second) {
+            merged.add(p)
+        } else {
+            merged[merged.lastIndex] = prev.first to max(prev.second, p.second)
         }
-        sum += (b - a + 1) - excluded
     }
 
-    return sum
+    return merged.sumOf { it.second - it.first + 1 }
 }
 
 fun main() {
