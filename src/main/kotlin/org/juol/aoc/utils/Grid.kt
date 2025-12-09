@@ -49,6 +49,16 @@ class Grid<T>(
         set(p.x, p.y, value)
     }
 
+    fun setSafe(
+        x: Int,
+        y: Int,
+        value: T,
+    ) {
+        if (x to y in this) {
+            list[y][x] = value
+        }
+    }
+
     operator fun contains(p: Point): Boolean = p.x in xIndices && p.y in yIndices
 
     operator fun contains(value: T): Boolean = list.any { it.contains(value) }
