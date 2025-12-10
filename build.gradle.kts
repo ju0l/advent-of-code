@@ -17,6 +17,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.2")
     implementation("org.jgrapht:jgrapht-core:1.5.2")
     implementation("org.jgrapht:jgrapht-ext:1.5.2")
+    implementation("org.locationtech.jts:jts-core:1.20.0")
 
     testImplementation(kotlin("test"))
 }
