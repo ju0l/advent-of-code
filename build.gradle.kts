@@ -18,6 +18,7 @@ dependencies {
     implementation("org.jgrapht:jgrapht-core:1.5.2")
     implementation("org.jgrapht:jgrapht-ext:1.5.2")
     implementation("org.locationtech.jts:jts-core:1.20.0")
+    implementation("org.choco-solver:choco-solver:4.10.18")
 
     testImplementation(kotlin("test"))
 }
